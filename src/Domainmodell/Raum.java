@@ -10,6 +10,4 @@ public class Raum {
     String gebaeude;
     String etage;
 
-
-
 }
