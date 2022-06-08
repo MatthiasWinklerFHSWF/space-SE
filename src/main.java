@@ -1,6 +1,7 @@
-import javax.swing.*;
-
 public class main {
-    int test = 5;
-    int test2 = 23;
+
+    public static void main(String [] args){
+        System.out.println("Hallo")
+
+    }
 }
