@@ -1,4 +1,4 @@
-package UI;
+package Logic;
 
 public interface IDT {
 
