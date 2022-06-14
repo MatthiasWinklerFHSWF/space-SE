@@ -1,5 +1,6 @@
 package UI;
 
+import Domainmodell.Benutzerart;
 import Domainmodell.Raum;
 import Logic.IDT;
 import Logic.Raumbuchungssystem;
@@ -15,7 +16,12 @@ public class Main {
 
         Raum neuerRaumZwei = new Raum(25, true, true, 20,"ABC", "2a");
         System.out.print(neuerRaumZwei.getRaumID());
+        System.out.println();
 
+
+        Benutzerart student = new Benutzerart();
+        student.istStudent();
+        System.out.print(student);
 
     }
 }

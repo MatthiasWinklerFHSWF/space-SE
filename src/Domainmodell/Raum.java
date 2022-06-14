@@ -3,13 +3,13 @@ package Domainmodell;
 public class Raum {
 
     // Raum Variablen
-    int raumID;
-    int sitzplaetze;
-    boolean  beamer;
-    boolean tafelWhiteBoard;
-    int anzahlComputer;
-    String gebaeude;
-    String etage;
+    private int raumID;
+    private int sitzplaetze;
+    private boolean  beamer;
+    private boolean tafelWhiteBoard;
+    private int anzahlComputer;
+    private String gebaeude;
+    private String etage;
 
     int counter = 0;
 
