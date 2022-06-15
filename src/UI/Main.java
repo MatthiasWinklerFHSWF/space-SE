@@ -10,9 +10,6 @@ public class Main {
     public static void main(String [] args){
         // System.out.println("Hallo");
 
-        IDT idt = new Raumbuchungssystem();
-
-
 
         Raum neuerRaum = new Raum(10, true, false, 10, "A", "3B");
         System.out.print(neuerRaum.getRaumID());
