@@ -1,4 +1,6 @@
 package Logic;
 
-public class Benutzermanager {
+public class Benutzermanager implements IBenutzermanager{
+
+
 }

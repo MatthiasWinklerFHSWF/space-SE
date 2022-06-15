@@ -1,6 +1,6 @@
 package Domainmodell;
 
-public class Benutzerart {
+public class Benutzerrolle {
 
     private boolean student;
     private boolean admin;
@@ -8,7 +8,7 @@ public class Benutzerart {
     private boolean stundenplanner;
 
     // Konstruktur - alle sind erstmal nichts
-    public Benutzerart(){
+    public Benutzerrolle(){
         this.student = false;
         this.admin = false;
         this.lehrender = false;
@@ -59,7 +59,7 @@ public class Benutzerart {
         return ausgabe;
     }
 
-    public void istAdmin(Benutzerart benutzerart){
+    public void istAdmin(Benutzerrolle benutzerrolle){
        setAdmin(true);
     }
 
