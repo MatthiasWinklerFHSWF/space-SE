@@ -18,5 +18,6 @@ public class Main {
     Benutzerrolle student = new Benutzerrolle();
     student.istStudent();
     System.out.print(student);
+
   }
 }

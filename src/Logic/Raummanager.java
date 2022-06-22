@@ -1,4 +1,3 @@
 package Logic;
 
-public class Raummanager implements IRaummanager {
-}
+public class Raummanager implements IRaummanager {}
