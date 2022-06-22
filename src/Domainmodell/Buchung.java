@@ -1,11 +1,12 @@
 package Domainmodell;
 
 public class Buchung {
-    int buchungsID;
-    Benutzer benuter;
-    Raum raum;
+
+    private int buchungsID;
+    private Benutzer benuter;
+    private Raum raum;
     //Date datum;
-    int zeitraum;
+    private int zeitraum;
 
 
     // Konstrukter

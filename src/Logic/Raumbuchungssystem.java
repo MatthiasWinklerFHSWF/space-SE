@@ -3,11 +3,6 @@ package Logic;
 
 import Domainmodell.Raum;
 
-public class Raumbuchungssystem implements IDT {
+public class Raumbuchungssystem implements IRaumbuchungssystem {
 
-
-    @Override
-    public Raum getRooms() {
-        return null;
-    }
 }
