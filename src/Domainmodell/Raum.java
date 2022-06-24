@@ -5,23 +5,17 @@ public class Raum {
     // Raum Variablen
     private int raumID;
     private int sitzplaetze;
-    private boolean  beamer;
-    private boolean tafelWhiteBoard;
-    private int anzahlComputer;
-    private String gebaeude;
-    private String etage;
+    private String raunnummer;
+
 
     int counter = 0;
 
     // Konstruktur > erzeugt einen Raum
-    public Raum(int sitzplaetze, boolean beamer, boolean tafelWhiteBoard, int anzahlComputer, String gebaeude, String etage){
+    public Raum(int sitzplaetze, String raunnummer){
         this.raumID = fortlaufendeID();
         this.sitzplaetze = sitzplaetze;
-        this.beamer = beamer;
-        this.tafelWhiteBoard = tafelWhiteBoard;
-        this.anzahlComputer = anzahlComputer;
-        this.gebaeude = gebaeude;
-        this.etage = etage;
+        this.raunnummer = raunnummer;
+
     }
 
     // fortlaufende ID erhöht bei jedem Aufruf die ID um 1 und gibt diese zurück
