@@ -25,7 +25,7 @@ public class Raum {
     }
 
     // fortlaufende ID erhöht bei jedem Aufruf die ID um 1 und gibt diese zurück
-    // Fehler: Hier das funktioniert noch nicht
+    // Fehler: Das funktioniert noch nicht
     public int fortlaufendeID(){
         counter++;
         return counter;
