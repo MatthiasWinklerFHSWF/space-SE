@@ -1,11 +1,13 @@
 package Domainmodell;
 
+import java.util.Date;
+
 public class Buchung {
 
     private int buchungsID;
     private Benutzer benuter;
     private Raum raum;
-    //Date datum;
+    Date datum;
     private int zeitraum;
 
 
