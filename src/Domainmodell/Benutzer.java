@@ -6,12 +6,10 @@ public class Benutzer {
     private Zugriffsrecht zugriffsrecht;
     private String passwort;
 
-    public Benutzer(String name, String passwort, Zugriffsrecht zugriffsrecht){
+    public Benutzer(String name, String passwort){
         this.name = name;
-        this.zugriffsrecht = zugriffsrecht;
+        this.zugriffsrecht = null;
         this.passwort = passwort;
     }
-
-
 
 }
