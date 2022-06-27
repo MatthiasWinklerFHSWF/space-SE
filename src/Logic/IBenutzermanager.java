@@ -8,8 +8,12 @@ public interface IBenutzermanager {
 
     void removeBenutzer(String name);
 
-    Benutzer[] getBenutzer(String name);
+    Benutzer[] getBenutzer();
 
     Benutzer createBenutzer(String name, String passwort);
+
+    boolean logInBenutzer();
+
+    String showBenutzer();
 
 }
