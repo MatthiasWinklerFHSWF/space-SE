@@ -1,8 +1,17 @@
 package test;
 
 public class RaummanagerTest {
+/*
+    //@Test
+    public void TestAddRoom(){
 
-    // @Test
+    }
 
+    //@Test
+    public void TestAddRoom(){
+
+    }
+
+*/
 
 }

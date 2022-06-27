@@ -47,7 +47,7 @@ public class Benutzermanager implements IBenutzermanager {
   @Override
   public boolean logInBenutzer() {
 
-    System.out.println("Login bitte geben Sie Benutername und Passwort ein!");
+    System.out.println("Login bitte geben Sie Benutzername und Passwort ein!");
     System.out.println("Benutzername:");
     String name = eingabeConsole();
     System.out.println("Passwort: ");
