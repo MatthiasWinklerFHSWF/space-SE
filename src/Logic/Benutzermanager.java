@@ -20,7 +20,7 @@ public class Benutzermanager implements IBenutzermanager {
         break;
       }
     }
-    // Datenbank.speicherBenutzer(benutzer);
+    // Datenbank.speicherBenutzer(user);
   }
 
   @Override

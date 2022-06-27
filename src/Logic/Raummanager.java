@@ -8,12 +8,13 @@ public class Raummanager implements IRaummanager {
 
   @Override
   public void addRaum(Raum raum) {
-    for (int i = 0; i < raeume.length; i++) {
+    for (int i = 0; i < raeume.length;5 i++) {
       if (raeume[i] == null) {
         raeume[i] = raum;
         break;
       }
     }
+    // Datenbank.speicherRaum(raeume);
   }
 
   @Override
