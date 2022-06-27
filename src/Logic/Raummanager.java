@@ -20,6 +20,7 @@ public class Raummanager implements IRaummanager {
   public Raum[] getRaeume(int raumID) {
     // >> Inhalte aus der Datenbank laden
     // raueme mit neuem Inhalt überschreiben
+    // raeume = Datenbank.ladeRaum();
     return raeume;
   }
 
@@ -35,7 +36,7 @@ public class Raummanager implements IRaummanager {
       if (raeume[i].getRaumID() == raumID) {
         raeume[i] = null;
       }
-      // saveRaeume
     }
+    // Datenbank.speicherRaum(raeume);
   }
 }

@@ -22,7 +22,9 @@ public class Raumbuchungssystem implements IRaumbuchungssystem {
       if (buchungen[i] == null) {
         buchungen[i] = buchung;
       }
+      break;
     }
+    // Datenbank.speicherBuchung(buchungen);
   }
 
   @Override

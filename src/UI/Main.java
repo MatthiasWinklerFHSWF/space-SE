@@ -1,7 +1,6 @@
 package UI;
 
 import Domainmodell.Benutzerrolle;
-import Domainmodell.Raum;
 
 public class Main {
 
@@ -11,6 +10,8 @@ public class Main {
     Benutzerrolle student = new Benutzerrolle();
     student.istStudent();
     System.out.print(student);
+
+
 
   }
 }
