@@ -2,14 +2,17 @@ package Domainmodell;
 
 public class Benutzer {
 
-    private String name;
-    private Zugriffsrecht zugriffsrecht;
-    private String passwort;
+  private final String name;
+  private final Zugriffsrecht zugriffsrecht;
+  private final String passwort;
 
-    public Benutzer(String name, String passwort){
-        this.name = name;
-        this.zugriffsrecht = null;
-        this.passwort = passwort;
-    }
+  public Benutzer(String name, String passwort) {
+    this.name = name;
+    this.zugriffsrecht = null;
+    this.passwort = passwort;
+  }
 
+  public String getName() {
+    return name;
+  }
 }

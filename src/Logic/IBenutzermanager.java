@@ -1,13 +1,15 @@
 package Logic;
 
 import Domainmodell.Benutzer;
-import Domainmodell.Raum;
 
 public interface IBenutzermanager {
 
-    void addBenutzer(String name, String passwort);
+    void addBenutzer(Benutzer benutzer);
 
     void removeBenutzer(String name);
 
     Benutzer[] getBenutzer(String name);
+
+    Benutzer createBenutzer(String name, String passwort);
+
 }
