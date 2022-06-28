@@ -48,7 +48,7 @@ public class Main {
 
     input = eingabeConsole();
 
-    if(input.equals('3')){
+    if(input.equals("3")){
       // 2. Auswahlmenü anbieten
       System.out.println(anzeigenAuswahlRaum());
     }

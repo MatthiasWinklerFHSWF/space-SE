@@ -6,6 +6,7 @@ import org.junit.Test;
 
 public class RaummanagerTest {
 
+    /*
     Raummanager rm = new Raummanager();
     Raum raum1 = new Raum(25, 102);
     Raum raum2 = new Raum(25, 103);
@@ -14,6 +15,8 @@ public class RaummanagerTest {
     // Testen ob beim hinzufügen nachher mehr Räume vorhanden sind
     @Test
     public void TestAddRoom(){
+        Object assertEquals;
+        assertEquals
 
     }
 
@@ -23,4 +26,5 @@ public class RaummanagerTest {
 
     }
 
+     */
 }
