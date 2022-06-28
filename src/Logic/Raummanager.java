@@ -8,12 +8,26 @@ public class Raummanager implements IRaummanager {
 
   @Override
   public void addRaum(Raum raum) {
+
+    boolean exists = false;
+
+    // überprüfen ob der Raum bereits exisitiert
+    for (int i = 0; i < this.raum.length; i++){
+      if (this.raum[i].getRaumnummer() == raum.getRaumnummer()){
+        System.out.println("Raum bereits vorhanden - hinzufügen fehlgeschlagen");
+        exists = true;
+      }
+    }
+
+    // den Raum an die nächste freie Stelle im Array einfügen
     for (int i = 0; i < this.raum.length; i++) {
-      if (this.raum[i] == null) {
+      if (this.raum[i] == null && !exists) {
         this.raum[i] = raum;
         break;
       }
     }
+
+    // das gesamte Array abspeichern
     speicherRaum(this.raum);
   }
 
@@ -33,6 +47,7 @@ public class Raummanager implements IRaummanager {
   @Override
   public String showRaumuebersicht() {
     String ausgabe = "";
+
     for (int i = 0; i < raum.length; i++){
       if (raum[i] != null){
         ausgabe += raum[i].toString() + "\n";

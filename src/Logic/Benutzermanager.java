@@ -60,11 +60,11 @@ public class Benutzermanager implements IBenutzermanager {
       }
 
       if (user[i].getName().equals(name) && user[i].getPasswort().equals(passwort)){
-        System.out.print("Login erfolgreich!");
+        System.out.print("Login erfolgreich");
         return true;
       }
     }
-    System.out.print("Fehler!");
+    System.out.print("Login fehlgeschlagen - Benutzername oder Passwort falsch");
     return false;
 }
 
