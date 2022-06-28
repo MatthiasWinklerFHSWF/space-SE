@@ -5,6 +5,7 @@ import Domainmodell.Benutzerrolle;
 import Domainmodell.Raum;
 import Logic.*;
 
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Main {
@@ -13,6 +14,12 @@ public class Main {
   public static String anzeigenAuswahl(){
     String ausgabe = "";
     ausgabe += "\nBitte geben Sie entsprechend ein \n" + "1. Buchungsystem anzeigen \n" + "2. Benutzerverwaltung anzeigen \n" + "3. Raumverwaltung anzeigen \n";
+    return ausgabe;
+  }
+
+  public static String anzeigenAuswahlRaum(){
+    String ausgabe = "";
+    ausgabe += "\nBitte geben Sie entsprechend ein \n" + "1. hinzufügen Raum \n" + "2. löschen Raum \n" + "3. anzeigen Raumüberischt \n";
     return ausgabe;
   }
 
@@ -40,6 +47,15 @@ public class Main {
     System.out.print(anzeigenAuswahl());
 
     input = eingabeConsole();
+
+    if(input.equals('3')){
+      // 2. Auswahlmenü anbieten
+      System.out.println(anzeigenAuswahlRaum());
+    }
+
+    input = eingabeConsole();
+
+
 
     System.out.println("Es wurde " + input + " eingegeben");
 
