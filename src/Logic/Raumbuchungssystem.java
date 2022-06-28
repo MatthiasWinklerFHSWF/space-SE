@@ -10,7 +10,9 @@ public class Raumbuchungssystem implements IRaumbuchungssystem {
 
   @Override
   public Buchung[] getBuchung() {
-    return new Buchung[0];
+    Datenbank data = new Datenbank();
+    this.buchungen = data.ladeBuchung();
+    return buchungen;
   }
 
   @Override
@@ -32,4 +34,11 @@ public class Raumbuchungssystem implements IRaumbuchungssystem {
     Buchung neueBuchung = new Buchung(buchungsID, benutzer, raum, zeitraum);
     return neueBuchung;
   }
+
+  public void speicherBuchung(Buchung[] buchungen){
+    Datenbank data = new Datenbank();
+    data.setTmpBuchung(buchungen);
+    data.speicherBuchung();
+  }
+
 }

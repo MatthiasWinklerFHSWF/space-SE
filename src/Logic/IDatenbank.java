@@ -6,17 +6,11 @@ import Domainmodell.Raum;
 
 public interface IDatenbank {
 
-  void speicherBuchung(Buchung[] buchung);
+  void speicherBuchung();
 
-  void speicherBuchung(Buchung buchung);
+  void speicherRaum();
 
-  void speicherRaum(Raum[] raum);
-
-  void speicherRaum(Raum raum);
-
-  void speicherBenutzer(Benutzer[] benutzer);
-
-  void speicherBenutzer(Benutzer benutzer);
+  void speicherBenutzer();
 
   Buchung[] ladeBuchung();
 

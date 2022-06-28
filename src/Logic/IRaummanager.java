@@ -9,8 +9,10 @@ public interface IRaummanager {
 
   void removeRaum(int raumID);
 
-  Raum[] getRaeume(int raumID);
+  Raum[] getRaum();
 
   Raum createRaum(int sitzplaetze, String raumnummer);
+
+  String showRaumuebersicht();
 
 }

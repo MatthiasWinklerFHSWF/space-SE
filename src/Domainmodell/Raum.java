@@ -3,34 +3,49 @@ package Domainmodell;
 public class Raum {
 
   // Raum Variablen
-  private final int raumID;
-  private final int sitzplaetze;
-  private final String raumnummer;
-  private int counter;
+  private int raumID;
+  private int sitzplaetze;
+  private String raumnummer;
+
+
+  public Raum(){
+
+  }
 
   // Konstruktur > erzeugt einen Raum
   public Raum(int sitzplaetze, String raumnummer) {
-    this.raumID = fortlaufendeID();
+    this.raumID = (int) (20*Math.random());
     this.sitzplaetze = sitzplaetze;
     this.raumnummer = raumnummer;
-  }
-
-  // fortlaufende ID erhöht bei jedem Aufruf die ID um 1 und gibt diese zurück
-  // Fehler: Das funktioniert noch nicht
-  public int fortlaufendeID() {
-    counter = 1;
-    return counter;
   }
 
   public int getRaumID() {
     return raumID;
   }
 
+  public int getSitzplaetze() {
+    return sitzplaetze;
+  }
+
+  public String getRaumnummer() {
+    return raumnummer;
+  }
+
+  public void setRaumID(int raumID) {
+    this.raumID = raumID;
+  }
+
+  public void setRaumnummer(String raumnummer) {
+    this.raumnummer = raumnummer;
+  }
+
+  public void setSitzplaetze(int sitzplaetze) {
+    this.sitzplaetze = sitzplaetze;
+  }
+
   public String toString() {
     String ausgabe = "";
-    ausgabe = "RaumID " + raumID + "\n";
-    ausgabe = "Raumnummer " + raumnummer + "\n";
-    ausgabe = "Sitzplätze " + sitzplaetze;
+    ausgabe = "RaumID " + raumID + " Raumnummer " + raumnummer + " Sitzplätze " + sitzplaetze;
     return ausgabe;
   }
 }
