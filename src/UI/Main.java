@@ -30,8 +30,11 @@ public class Main {
     rbs.getBuchung();
 
     // Login Benutzer
+    do {
+      bm.logInBenutzer();
+    } while (!bm.logInBenutzer());
 
-    bm.logInBenutzer();
+    // bm.logInBenutzer();
 
     // 1. Auswahlmenü anbieten
     System.out.print(anzeigenAuswahl());
