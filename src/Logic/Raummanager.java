@@ -9,13 +9,15 @@ public class Raummanager implements IRaummanager {
   @Override
   public void addRaum(Raum raum) {
 
+    // ToDo: Exists in Methode ExistsRoom umwandeln
     boolean exists = false;
 
     // überprüfen ob der Raum bereits exisitiert
     for (int i = 0; i < this.raum.length; i++){
-      if (this.raum[i].getRaumnummer() == raum.getRaumnummer()){
-        System.out.println("Raum bereits vorhanden - hinzufügen fehlgeschlagen");
-        exists = true;
+      if ( (this.raum[i] != null) && (this.raum[i].getRaumnummer().equals(raum.getRaumnummer()))){
+          System.out.println("Raum bereits vorhanden - hinzufügen fehlgeschlagen");
+          exists = true;
+          break;
       }
     }
 
@@ -23,6 +25,7 @@ public class Raummanager implements IRaummanager {
     for (int i = 0; i < this.raum.length; i++) {
       if (this.raum[i] == null && !exists) {
         this.raum[i] = raum;
+        System.out.println("Der Raum wurde erfolgreich angelegt und gespeichert");
         break;
       }
     }
