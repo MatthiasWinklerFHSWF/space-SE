@@ -64,7 +64,7 @@ public class Benutzermanager implements IBenutzermanager {
         return true;
       }
     }
-    System.out.print("Login fehlgeschlagen - Benutzername oder Passwort falsch");
+    System.out.print("<< Login fehlgeschlagen - Benutzername oder Passwort falsch >> \n");
     return false;
 }
 
