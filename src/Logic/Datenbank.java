@@ -11,7 +11,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 
 public class Datenbank implements IDatenbank {
-
+// Datenbank Variablen
   Raum[] tmpRaum = new Raum[999];
   Benutzer[] tmpBenutzer = new Benutzer[999];
   Buchung[] tmpBuchung = new Buchung[999];
@@ -36,7 +36,7 @@ public class Datenbank implements IDatenbank {
     return tmpRaum;
   }
 
-
+  //Methode um Räume zu speichern
   @Override
   public void speicherRaum() {
     try{
@@ -54,6 +54,7 @@ public class Datenbank implements IDatenbank {
 
   }
 
+  //Methode um Buchungen zu speichern
   @Override
   public void speicherBuchung() {
 
@@ -72,6 +73,7 @@ public class Datenbank implements IDatenbank {
 
   }
 
+  //Methode um Benutzer zu speichern
   @Override
   public void speicherBenutzer() {
 
@@ -89,6 +91,7 @@ public class Datenbank implements IDatenbank {
     }
   }
 
+  //Methode um Benutzer zu laden
   @Override
   public Benutzer[] ladeBenutzer() {
 
@@ -113,6 +116,7 @@ public class Datenbank implements IDatenbank {
     return tmpBenutzer;
   }
 
+  //Methode um Buchungen zu laden
   @Override
   public Buchung[] ladeBuchung() {
 
@@ -137,6 +141,7 @@ public class Datenbank implements IDatenbank {
     return tmpBuchung;
   }
 
+  //Methode um Räume zu laden
   @Override
   public Raum[] ladeRaum() {
 
