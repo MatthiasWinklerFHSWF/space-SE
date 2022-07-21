@@ -39,9 +39,15 @@ public class Datenbank implements IDatenbank {
   //Methode um Räume zu speichern
   @Override
   public void speicherRaum() {
+    //Try-Catch um die Exeptions abzufangen
+    //FileOutputStream um die Daten in eine Datei zu schreiben
+    //XMLEncoder um die Daten ins XML-Format zu bringen
+
     try{
       FileOutputStream fos = new FileOutputStream(new File("./raum.xml"));
       XMLEncoder encoder = new XMLEncoder(fos);
+
+      //Jedes Element im Array in die XML schreiben
       for (int i = 0; i < tmpRaum.length; i++){
         encoder.writeObject(tmpRaum[i]);
       }
@@ -57,10 +63,15 @@ public class Datenbank implements IDatenbank {
   //Methode um Buchungen zu speichern
   @Override
   public void speicherBuchung() {
+    //Try-Catch um die Exeptions abzufangen
+    //FileOutputStream um die Daten in eine Datei zu schreiben
+    //XMLEncoder um die Daten ins XML-Format zu bringen
 
     try{
       FileOutputStream fos = new FileOutputStream(new File("./buchung.xml"));
       XMLEncoder encoder = new XMLEncoder(fos);
+
+      //Jedes Element im Array in die XML schreiben
       for (int i = 0; i < tmpBuchung.length; i++){
         encoder.writeObject(tmpBuchung[i]);
       }
@@ -76,10 +87,15 @@ public class Datenbank implements IDatenbank {
   //Methode um Benutzer zu speichern
   @Override
   public void speicherBenutzer() {
+    //Try-Catch um die Exeptions abzufangen
+    //FileOutputStream um die Daten in eine Datei zu schreiben
+    //XMLEncoder um die Daten ins XML-Format zu bringen
 
     try{
       FileOutputStream fos = new FileOutputStream(new File("./benutzer.xml"));
       XMLEncoder encoder = new XMLEncoder(fos);
+
+      //Jedes Element im Array in die XML schreiben
       for (int i = 0; i < tmpBenutzer.length; i++){
         encoder.writeObject(tmpBenutzer[i]);
       }
@@ -94,6 +110,9 @@ public class Datenbank implements IDatenbank {
   //Methode um Benutzer zu laden
   @Override
   public Benutzer[] ladeBenutzer() {
+    //Try-Catch um die Exeptions abzufangen
+    //FileOutputStream um die Daten in eine Datei zu schreiben
+    //XMLEncoder um die Daten ins aus dem XML ins normale Format zu konvertieren
 
     try{
 
@@ -101,6 +120,7 @@ public class Datenbank implements IDatenbank {
       XMLDecoder decoder = new XMLDecoder(fis);
       Benutzer tmp = new Benutzer();
 
+      //Jedes Element aus der XML laden
       for (int i = 0; i < tmpRaum.length; i++){
         tmpBenutzer[i] = (Benutzer)decoder.readObject();
       }
@@ -119,6 +139,9 @@ public class Datenbank implements IDatenbank {
   //Methode um Buchungen zu laden
   @Override
   public Buchung[] ladeBuchung() {
+    //Try-Catch um die Exeptions abzufangen
+    //FileOutputStream um die Daten in eine Datei zu schreiben
+    //XMLEncoder um die Daten ins aus dem XML ins normale Format zu konvertieren
 
     try{
 
@@ -126,6 +149,7 @@ public class Datenbank implements IDatenbank {
       XMLDecoder decoder = new XMLDecoder(fis);
       Buchung tmp = new Buchung();
 
+      //Jedes Element aus der XML laden
       for (int i = 0; i < tmpBuchung.length; i++){
         tmpBuchung[i] = (Buchung)decoder.readObject();
       }
@@ -144,6 +168,9 @@ public class Datenbank implements IDatenbank {
   //Methode um Räume zu laden
   @Override
   public Raum[] ladeRaum() {
+    //Try-Catch um die Exeptions abzufangen
+    //FileOutputStream um die Daten in eine Datei zu schreiben
+    //XMLEncoder um die Daten ins aus dem XML ins normale Format zu konvertieren
 
     try{
 
@@ -151,6 +178,7 @@ public class Datenbank implements IDatenbank {
       XMLDecoder decoder = new XMLDecoder(fis);
       Raum tmp = new Raum();
 
+      //Jedes Element aus der XML laden
       for (int i = 0; i < tmpRaum.length; i++){
         tmpRaum[i] = (Raum)decoder.readObject();
       }
