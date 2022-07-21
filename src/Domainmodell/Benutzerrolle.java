@@ -2,6 +2,7 @@ package Domainmodell;
 
 public class Benutzerrolle {
 
+    // Variablen
     private boolean student;
     private boolean admin;
     private boolean lehrender;
@@ -49,6 +50,7 @@ public class Benutzerrolle {
         return stundenplanner;
     }
 
+    // Ausgabe toString
     public String toString(){
         String  ausgabe = "";
         ausgabe = "Student " + student + "\n" +

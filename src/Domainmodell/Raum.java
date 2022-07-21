@@ -7,7 +7,6 @@ public class Raum {
   private int sitzplaetze;
   private String raumnummer;
 
-
   public Raum(){
 
   }
@@ -18,7 +17,7 @@ public class Raum {
     this.sitzplaetze = sitzplaetze;
     this.raumnummer = raumnummer;
   }
-
+// Methoden
   public int getRaumID() {
     return raumID;
   }
@@ -43,6 +42,7 @@ public class Raum {
     this.sitzplaetze = sitzplaetze;
   }
 
+  // Ausgabe mit toString
   public String toString() {
     String ausgabe = "";
     ausgabe = "RaumID " + raumID + " Raumnummer " + raumnummer + " Sitzplätze " + sitzplaetze;
