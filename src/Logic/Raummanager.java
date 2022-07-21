@@ -13,7 +13,9 @@ public class Raummanager implements IRaummanager {
     boolean exists = false;
 
     // überprüfen ob der Raum bereits exisitiert
+    // For-Schleife solange durchlaufen wie Räume im Array sind
     for (int i = 0; i < this.raum.length; i++){
+      //Überprüft ob eine Raumnummer im Array vorhanden ist
       if ( (this.raum[i] != null) && (this.raum[i].getRaumnummer().equals(raum.getRaumnummer()))){
           System.out.println("Raum bereits vorhanden - hinzufügen fehlgeschlagen");
           exists = true;
@@ -22,8 +24,11 @@ public class Raummanager implements IRaummanager {
     }
 
     // den Raum an die nächste freie Stelle im Array einfügen
+    //Array durchlaufen
     for (int i = 0; i < this.raum.length; i++) {
+      //Freie Stelle im Array finden
       if (this.raum[i] == null && !exists) {
+        //Raum an freie Stelle einfügen
         this.raum[i] = raum;
         System.out.println("Der Raum wurde erfolgreich angelegt und gespeichert");
         break;
@@ -35,12 +40,14 @@ public class Raummanager implements IRaummanager {
   }
 
   @Override
+  //Array an Räumen aus der Datei laden
   public Raum[] getRaum() {
     Datenbank data = new Datenbank();
     this.raum = data.ladeRaum();
     return raum;
   }
 
+  //ToDo Methode ist redundant auf Sinnhaftigkeit prüfen
   @Override
   public Raum createRaum(int sitzplaetze, String raumnummer) {
     Raum neuerRaum = new Raum(sitzplaetze, raumnummer);
@@ -48,6 +55,7 @@ public class Raummanager implements IRaummanager {
   }
 
   @Override
+  //Raum Array auf die Konsole ausgeben
   public String showRaumuebersicht() {
     String ausgabe = "";
 
@@ -60,6 +68,7 @@ public class Raummanager implements IRaummanager {
   }
 
   @Override
+  //Einen Raum über die RaumID löschen
   public void removeRaum(int raumID) {
     for (int i = 0; i < raum.length; i++) {
       if (raum[i].getRaumID() == raumID) {
@@ -69,6 +78,7 @@ public class Raummanager implements IRaummanager {
    speicherRaum(raum);
   }
 
+  //Raum Array in die XML Datei Speichern
   public void speicherRaum(Raum[] raum){
     Datenbank data = new Datenbank();
     data.setTmpRaum(raum);
