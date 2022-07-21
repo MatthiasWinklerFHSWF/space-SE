@@ -1,11 +1,13 @@
 package Domainmodell;
 
 public class Benutzer {
-
+ // Benutzer Variablen
   private String name;
+  // aktuell in Planung, Konstruktor momentan null
   private Zugriffsrecht zugriffsrecht;
   private String passwort;
 
+  //leerer Konstruktor zur Datenbankerkennung
   public Benutzer(){
 
   }
@@ -15,7 +17,7 @@ public class Benutzer {
     this.zugriffsrecht = null;
     this.passwort = passwort;
   }
-
+// Methoden
   public String getName() {
     return name;
   }
@@ -40,6 +42,7 @@ public class Benutzer {
     this.zugriffsrecht = zugriffsrecht;
   }
 
+  // toString zur Ausgabe von Benutzern
   public String toString(){
     String ausgabe = "";
     ausgabe += "Benutzername: " + getName() + ", Passwort: " + getPasswort() + "\n";
@@ -47,4 +50,3 @@ public class Benutzer {
   }
 
 }
-
