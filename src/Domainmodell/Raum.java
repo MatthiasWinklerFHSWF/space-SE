@@ -11,7 +11,7 @@ public class Raum {
 
   }
 
-  // Konstruktur > erzeugt einen Raum
+  // Konstruktor > erzeugt einen Raum
   public Raum(int sitzplaetze, String raumnummer) {
     this.raumID = (int) (20*Math.random());
     this.sitzplaetze = sitzplaetze;
