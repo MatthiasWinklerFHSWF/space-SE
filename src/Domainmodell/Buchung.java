@@ -11,7 +11,7 @@ public class Buchung {
     private int zeitraum;
 
 
-    // Konstrukter
+    // Konstruktor
     public Buchung(){
 
     }

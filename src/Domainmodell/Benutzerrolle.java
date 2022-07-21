@@ -2,12 +2,13 @@ package Domainmodell;
 
 public class Benutzerrolle {
 
+    // Variablen
     private boolean student;
     private boolean admin;
     private boolean lehrender;
     private boolean stundenplanner;
 
-    // Konstruktur - alle sind erstmal nichts
+    // Konstruktor - alle sind erstmal nichts
     public Benutzerrolle(){
         this.student = false;
         this.admin = false;
@@ -49,6 +50,7 @@ public class Benutzerrolle {
         return stundenplanner;
     }
 
+    // Ausgabe toString
     public String toString(){
         String  ausgabe = "";
         ausgabe = "Student " + student + "\n" +
