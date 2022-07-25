@@ -2,9 +2,11 @@ package UI;
 
 import Domainmodell.Benutzer;
 import Domainmodell.Benutzerrolle;
+import Domainmodell.Buchung;
 import Domainmodell.Raum;
 import Logic.*;
 
+import java.util.Date;
 import java.util.Scanner;
 
 public class Main {
@@ -195,8 +197,16 @@ public class Main {
     bm.logInBenutzer();
     */
 
-    runRMBS();
+    //runRMBS();
+// Test Buchung
+    Benutzer benutzer = new Benutzer("Mika", "1234");
+    Raum raum = new Raum(10,"10");
+    Date datum = Buchung.createDate(2020, 5, 12);
 
+    Buchung abc = new Buchung(benutzer, raum, 1, datum);
+
+    // System.out.println(datum);
+    System.out.println(abc);
 
 
 

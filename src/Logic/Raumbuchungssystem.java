@@ -31,7 +31,7 @@ public class Raumbuchungssystem implements IRaumbuchungssystem {
 
   @Override
   public Buchung createBuchung(int buchungsID, Benutzer benutzer, Raum raum, int zeitraum) {
-    Buchung neueBuchung = new Buchung(buchungsID, benutzer, raum, zeitraum);
+    Buchung neueBuchung = null;
     return neueBuchung;
   }
 
