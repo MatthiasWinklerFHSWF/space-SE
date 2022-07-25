@@ -16,7 +16,9 @@ public class Raumbuchungssystem implements IRaumbuchungssystem {
   }
 
   @Override
-  public void removeBuchung(int buchungsID) {}
+  public void removeBuchung(int buchungsID) {
+
+  }
 
   @Override
   public void addBuchung(Buchung buchung) {
@@ -41,4 +43,16 @@ public class Raumbuchungssystem implements IRaumbuchungssystem {
     data.speicherBuchung();
   }
 
+  public boolean compareBuchung(Buchung buchung) {
+    for (int i = 0; i < buchungen.length; i++) {
+      if (buchungen[i].getRaum().getRaumnummer() == buchung.getRaum().getRaumnummer() &&
+          buchungen[i].getZeitraum() == buchung.getZeitraum() &&
+          buchungen[i].getDatum().getDate() == buchung.getDatum().getDate() &&
+          buchungen[i].getDatum().getMonth() == buchung.getDatum().getMonth() &&
+          buchungen[i].getDatum().getYear() == buchung.getDatum().getYear()) {
+        return true;
+      }
+    }
+    return false;
+  }
 }
