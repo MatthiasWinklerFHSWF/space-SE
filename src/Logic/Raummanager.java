@@ -81,9 +81,15 @@ public class Raummanager implements IRaummanager {
 
   public boolean compareRaum(Raum raumNeu) {
     for (int i = 0; i < raum.length; i++) {
+
+      if (raum[i] == null){
+        continue;
+      }
+
       if (raum[i].getRaumnummer().equals(raumNeu.getRaumnummer())) {
         return true;
       }
+
     }
     return false;
   }
