@@ -2,7 +2,8 @@ package test;
 
 import Domainmodell.Raum;
 import Logic.Raummanager;
-//import org.junit.jupiter.api.Test;
+import org.junit.Assert;
+import org.junit.jupiter.api.Test;
 //import org.junit.jupiter.api;
 
 
@@ -18,25 +19,15 @@ public class RaummanagerTest {
 
     // Testen ob beim hinzufügen nachher mehr Räume vorhanden sind
 
-    /*
+
     @Test
     public void TestAddRoom(){
-        //Erstellt Objekt welches ins zum Test in Array eingefügt wird
-        ResizingArray resizingArray = new ResizingArray(2);
 
-        //Fügt das Objekt dem Array hinzu
-        resizingArray.addRaum(raum1);
-        //Überprüft ob das Objekt hinzugefügt wurde
-        Assert.isTrue(resizingArray.length()== 1);
 
-        resizingArray.addRaum(raum2);
-        Assert.isTrue(resizingArray.length()== 2);
-
-        //kann nur 2 hinzufügen, da resizing Objekt nur 2 groß
-        resizingArray.addRaum(raum3);
-        Assert.isTrue(resizingArray.length()== 3);
+        Assert.assertTrue(rm.compareRaum(raum1));
     }
 
+    /*
     public void TestremoveRaum(){
         ResizingArray resizingArray = new ResizingArray(1);
 
@@ -47,8 +38,7 @@ public class RaummanagerTest {
         resizingArray.removeRaum();
         Assert.isTrue(resizingArray.length()== 0);
 
-
     }
+    */
 
-     */
 }
