@@ -1,5 +1,6 @@
 package Logic;
 
+import Domainmodell.Buchung;
 import Domainmodell.Raum;
 
 public class Raummanager implements IRaummanager {
@@ -76,6 +77,15 @@ public class Raummanager implements IRaummanager {
       }
     }
    speicherRaum(raum);
+  }
+
+  public boolean compareRaum(Raum raumNeu) {
+    for (int i = 0; i < raum.length; i++) {
+      if (raum[i].getRaumnummer().equals(raumNeu.getRaumnummer())) {
+        return true;
+      }
+    }
+    return false;
   }
 
   //Raum Array in die XML Datei Speichern

@@ -202,7 +202,6 @@ public class Main {
     Benutzer benutzer = new Benutzer("Mika", "1234");
     Raum raum = new Raum(10,"10");
     Date datum = Buchung.createDate(2020, 5, 12);
-
     Buchung abc = new Buchung(benutzer, raum, 1, datum);
 
     // System.out.println(datum);

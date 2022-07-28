@@ -1,14 +1,12 @@
 package Logic;
 
 import Domainmodell.Benutzer;
-import Domainmodell.Raum;
 
 import java.util.Scanner;
 
 public class Benutzermanager implements IBenutzermanager {
 
   public Benutzer[] user = new Benutzer[999];
-  public Benutzer neuerBenutzer;
 
   @Override
   public Benutzer[] getBenutzer() {
@@ -49,7 +47,7 @@ public class Benutzermanager implements IBenutzermanager {
     // und setzt die Stelle im Array bei gleichem Namen auf null
     // ToDo Gefahr bei gleichem Namen das der falsche User gelöscht wird -> auf Benutzer ändern
     for (int i = 0; i < user.length; i++) {
-      if (user[i].getName() == name) {
+      if (user[i].getName().equals(name)) {
         user[i] = null;
       }
       // Methode speicherBenutzer aufrufen und User Array in XML- Datei speichern
