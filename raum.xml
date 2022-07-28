@@ -1,60 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<java version="15.0.1" class="java.beans.XMLDecoder">
+<java version="15.0.7" class="java.beans.XMLDecoder">
  <object class="Domainmodell.Raum">
   <void property="raumID">
-   <int>15</int>
+   <int>14</int>
   </void>
   <void property="raumnummer">
-   <string>10</string>
+   <string>102</string>
   </void>
   <void property="sitzplaetze">
-   <int>10</int>
+   <int>25</int>
   </void>
  </object>
- <object class="Domainmodell.Raum">
-  <void property="raumID">
-   <int>1</int>
-  </void>
-  <void property="raumnummer">
-   <string>20</string>
-  </void>
-  <void property="sitzplaetze">
-   <int>20</int>
-  </void>
- </object>
- <object class="Domainmodell.Raum">
-  <void property="raumID">
-   <int>5</int>
-  </void>
-  <void property="raumnummer">
-   <string>30</string>
-  </void>
-  <void property="sitzplaetze">
-   <int>30</int>
-  </void>
- </object>
- <object class="Domainmodell.Raum">
-  <void property="raumID">
-   <int>10</int>
-  </void>
-  <void property="raumnummer">
-   <string>40</string>
-  </void>
-  <void property="sitzplaetze">
-   <int>10</int>
-  </void>
- </object>
- <object class="Domainmodell.Raum">
-  <void property="raumID">
-   <int>17</int>
-  </void>
-  <void property="raumnummer">
-   <string>205</string>
-  </void>
-  <void property="sitzplaetze">
-   <int>120</int>
-  </void>
- </object>
+ <null/>
+ <null/>
+ <null/>
+ <null/>
  <null/>
  <null/>
  <null/>

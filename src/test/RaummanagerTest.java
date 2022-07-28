@@ -20,23 +20,17 @@ public class RaummanagerTest {
     // Testen ob beim hinzufügen nachher mehr Räume vorhanden sind
 
 
+
     @Test
     public void TestAddRoom(){
 
-
+        rm.addRaum(raum1);
         Assert.assertTrue(rm.compareRaum(raum1));
     }
 
     /*
     public void TestremoveRaum(){
-        ResizingArray resizingArray = new ResizingArray(1);
 
-        resizingArray.addRaum(raum1);
-        Assert.isTrue(resizingArray.length()== 1);
-
-        //RaumID einfügen um den Raum zu löschen
-        resizingArray.removeRaum();
-        Assert.isTrue(resizingArray.length()== 0);
 
     }
     */
