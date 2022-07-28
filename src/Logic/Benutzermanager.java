@@ -114,4 +114,19 @@ public class Benutzermanager implements IBenutzermanager {
     return name;
   }
 
+  public boolean compareBenutzer(Benutzer benutzertest){
+    for (int i = 0; i < user.length; i++) {
+
+      if (user[i] == null){
+        continue;
+      }
+
+      if (user[i].getName().equals(benutzertest.getName()) && user[i].getPasswort().equals(benutzertest.getPasswort())){
+        return true;
+      }
+
+    }
+    return false;
+  }
+
 }
