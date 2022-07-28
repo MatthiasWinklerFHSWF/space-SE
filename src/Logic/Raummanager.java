@@ -70,14 +70,14 @@ public class Raummanager implements IRaummanager {
 
   @Override
   //Einen Raum über die RaumID löschen
-  public void removeRaum(Raum raume) {
+  public void removeRaum(String raumnummer) {
     for (int i = 0; i < raum.length; i++) {
 
       if (raum[i] == null){
         continue;
       }
 
-      if (raum[i].getRaumnummer().equals(raume.getRaumnummer())) {
+      if (raum[i].getRaumnummer().equals(raumnummer)) {
         raum[i] = null;
       }
     }
