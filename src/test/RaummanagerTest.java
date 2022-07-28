@@ -22,10 +22,17 @@ public class RaummanagerTest {
 
     @Test
     public void TestAddRoom(){
+        rm.addRaum(raum1);
+        Assert.assertTrue(rm.compareRaum(raum1));
+    }
 
+    @Test
+    public void TestAddRoomZwei(){
 
         Assert.assertTrue(rm.compareRaum(raum1));
     }
+
+
 
     /*
     public void TestremoveRaum(){
