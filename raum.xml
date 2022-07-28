@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<java version="15.0.1" class="java.beans.XMLDecoder">
+<java version="15.0.7" class="java.beans.XMLDecoder">
+ <null/>
  <object class="Domainmodell.Raum">
   <void property="raumID">
-   <int>11</int>
+   <int>5</int>
   </void>
   <void property="raumnummer">
-   <string>102</string>
+   <string>103</string>
   </void>
   <void property="sitzplaetze">
    <int>25</int>
   </void>
  </object>
- <null/>
  <null/>
  <null/>
  <null/>

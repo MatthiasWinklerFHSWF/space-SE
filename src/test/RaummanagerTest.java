@@ -1,4 +1,4 @@
-package test;
+package Test;
 
 import Domainmodell.Raum;
 import Logic.Raummanager;
@@ -34,18 +34,13 @@ public class RaummanagerTest {
 
 
 
-    /*
-    public void TestremoveRaum(){
-        ResizingArray resizingArray = new ResizingArray(1);
+    @Test
+    public void TestRemoveRaum(){
+        rm.addRaum(raum1);
+        rm.addRaum(raum2);
 
-        resizingArray.addRaum(raum1);
-        Assert.isTrue(resizingArray.length()== 1);
-
-        //RaumID einfügen um den Raum zu löschen
-        resizingArray.removeRaum();
-        Assert.isTrue(resizingArray.length()== 0);
-
+        rm.removeRaum("102");
+        Assert.assertFalse(rm.compareRaum(raum1));
     }
-    */
 
 }

@@ -7,7 +7,7 @@ public interface IRaummanager {
 
   void addRaum(Raum raum);
 
-  void removeRaum(int raumID);
+  void removeRaum(String raumnummer);
 
   Raum[] getRaum();
 
