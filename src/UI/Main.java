@@ -180,8 +180,8 @@ public class Main {
 
     // Raum[] rooms = rm.getRaum();
 
-    /*
 
+    /*
     IBenutzermanager bm = new Benutzermanager();
     Benutzer mw = new Benutzer("Matthias", "123");
     Benutzer mg = new Benutzer("Mika", "1234");
@@ -195,10 +195,11 @@ public class Main {
     System.out.print(bm.showBenutzer());
 
     bm.logInBenutzer();
-    */
+    /*
 
-    //runRMBS();
-// Test Buchung
+
+    /*
+    // Test Buchung
     Benutzer benutzer = new Benutzer("Mika", "1234");
     Raum raum = new Raum(10,"10");
     Date datum = Buchung.createDate(2020, 5, 12);
@@ -206,8 +207,9 @@ public class Main {
 
     // System.out.println(datum);
     System.out.println(abc);
+    */
 
-
+    runRMBS();
 
   }
 }
