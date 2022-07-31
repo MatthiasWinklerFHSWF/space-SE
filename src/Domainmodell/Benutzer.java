@@ -12,6 +12,7 @@ public class Benutzer {
 
   }
 
+  // ToDo Name als Benutzername als Unique ergänzen und zusätzlich Vorname und Nachname einfügen
   public Benutzer(String name, String passwort) {
     this.name = name;
     this.zugriffsrecht = null;

@@ -22,14 +22,20 @@ public class Benutzermanager implements IBenutzermanager {
     // der ersten freien Stelle wird der Benutzer eingefügt
     // nach dem einfügen wird die For Schleife verlassen
     // ToDo entweder Fehler Meldung wenn das Array voll ist oder Datenstruktur überarbeiten(ArrayList..)
-    for (int i = 0; i < user.length; i++) {
-      if (user[i] == null) {
-        user[i] = benutzer;
-        break;
+
+    if (!compareBenutzer(benutzer)){
+      for (int i = 0; i < user.length; i++) {
+        if (user[i] == null) {
+          user[i] = benutzer;
+          break;
+        }
       }
+      // Methode speicherBenutzer aufrufen und User Array in XML- Datei speichern
+      speicherBenutzer(user);
+      System.out.println("Benutzer erfolgreich hinzugefügt");
     }
-    // Methode speicherBenutzer aufrufen und User Array in XML- Datei speichern
-    speicherBenutzer(user);
+    System.out.println("Benutzername bereits vergeben - anlegen fehlgeschlagen");
+
   }
 
   // Methode um einen Benutzer zu erstellen
@@ -121,7 +127,7 @@ public class Benutzermanager implements IBenutzermanager {
         continue;
       }
 
-      if (user[i].getName().equals(benutzertest.getName()) && user[i].getPasswort().equals(benutzertest.getPasswort())){
+      if (user[i].getName().equals(benutzertest.getName())){
         return true;
       }
 
