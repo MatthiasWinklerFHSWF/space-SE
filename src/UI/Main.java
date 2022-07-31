@@ -12,6 +12,50 @@ import java.util.Scanner;
 public class Main {
 
 
+  public static void anzeigenWillkommen(Benutzermanager bm){
+    //String ausgabe = "Willkommen im Raumbuchungssystem der FH SWF" + "\n";
+    String ausgabe = "bitte wählen Sie aus:" + "\n";
+    ausgabe += "1. Login" + "\n";
+    ausgabe += "2. Registrieren";
+    System.out.println(ausgabe);
+    eingabeWillkommen(bm);
+
+  }
+
+  public static void eingabeWillkommen(Benutzermanager bm){
+    String input = eingabeConsole();
+
+    if (input.equals("1")){
+      loopLogin(bm);
+    }
+
+    if (input.equals("2")){
+      System.out.println("Als neuer Nutzer registrieren:");
+      System.out.println("Bitte geben Sie ihren Name ein:");
+      String name = eingabeConsole();
+      System.out.println("Bitte geben Sie ein Passwort ein:");
+      String passwort = eingabeConsole();
+
+      // Benutzer mit create erzeugen
+      // ToDo redundant mit normalen Konstruktor überarbeiten
+      Benutzer temp = bm.createBenutzer(name, passwort);
+      bm.addBenutzer(temp);
+
+      if (bm.compareBenutzer(temp)){
+        anzeigenWillkommen(bm);
+
+      }
+    }
+  }
+
+  public static void loopLogin(Benutzermanager bm){
+    boolean login;
+    do {
+      login = false;
+      login = bm.logInBenutzer();
+    } while (!login);
+  }
+
   public static String anzeigenAuswahl(){
     String ausgabe = "";
     ausgabe += "\nBitte geben Sie entsprechend ein \n" + "1. Buchungsystem anzeigen \n" + "2. Benutzerverwaltung anzeigen \n" + "3. Raumverwaltung anzeigen \n";
@@ -82,6 +126,12 @@ public class Main {
     bm.getBenutzer();
     rm.getRaum();
     rbs.getBuchung();
+
+    // Abfrage Login Benutzer oder Neuer Benutzer anlegen
+    anzeigenWillkommen(bm);
+
+    // 1. Auswahlmenü anbieten
+
  /*
     // Login Benutzer
     boolean login;
