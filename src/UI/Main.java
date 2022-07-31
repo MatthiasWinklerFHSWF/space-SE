@@ -56,29 +56,40 @@ public class Main {
     } while (!login);
   }
 
-  public static String anzeigenAuswahl(){
+  public static void anzeigenAuswahlMenu(Benutzermanager bm, Raummanager rm, Raumbuchungssystem rbs){
+
     String ausgabe = "";
+    boolean bool = false;
     ausgabe += "\nBitte geben Sie entsprechend ein \n" + "1. Buchungsystem anzeigen \n" + "2. Benutzerverwaltung anzeigen \n" + "3. Raumverwaltung anzeigen \n";
-    return ausgabe;
+    System.out.println(ausgabe);
+    do {
+      bool = eingabeAuswahlMenu(bm, rm, rbs);
+    } while(bool);
   }
 
-  public static void eingabeAuswahl(String input){
-    if(input.equals("1")){
-      // 1. Auswahlmenü anbieten
-      System.out.println("Auswahl << Buchungsystem >> wurde ausgewählt");
+  public static boolean eingabeAuswahlMenu(Benutzermanager bm, Raummanager rm, Raumbuchungssystem rbs){
 
+    String input = eingabeConsole();
+
+    if(input.equals("1")){
+      // 1. Auswählmenü Buchungssystem
+      System.out.println("Auswahl << Buchungsystem >> wurde ausgewählt");
+      return true;
     }
 
     if(input.equals("2")){
-      // 2. Auswahlmenü anbieten
+      // 2. Auswahlmenü Benutzerverwaltung
       System.out.println("Auswahl << Benutzerverwaltung >> wurde ausgewählt");
+      return true;
     }
 
     if(input.equals("3")){
-      // 3. Auswahlmenü anbieten
+      // 3. Auswahlmenü Raumverwaltung
       System.out.println("Auswahl << Raumverwaltung >> wurde ausgewählt");
-      System.out.println(anzeigenAuswahlRaum());
+      anzeigenAuswahlRaum(rm);
+      return true;
     }
+    return false;
   }
 
   public static String anzeigenAuswahlRaum(){
@@ -131,6 +142,7 @@ public class Main {
     anzeigenWillkommen(bm);
 
     // 1. Auswahlmenü anbieten
+    anzeigenAuswahlMenu(bm, rm, rbs);
 
  /*
     // Login Benutzer
