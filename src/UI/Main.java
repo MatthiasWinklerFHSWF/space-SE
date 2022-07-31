@@ -260,7 +260,6 @@ public class Main {
   }
 
 
-
   public static String eingabeConsole() {
     Scanner sc = new Scanner(System.in);
     String name = sc.nextLine();
