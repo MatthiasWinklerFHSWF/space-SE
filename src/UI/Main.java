@@ -82,7 +82,7 @@ public class Main {
     bm.getBenutzer();
     rm.getRaum();
     rbs.getBuchung();
-
+ /*
     // Login Benutzer
     boolean login;
     do {
@@ -109,7 +109,7 @@ public class Main {
       input = eingabeConsole();
     }
 
-    */
+
 
     // 3. Menü wird angezeigt
     inputB = eingabeConsole();
@@ -134,7 +134,7 @@ public class Main {
       inputB = eingabeConsole();
 
     } while(inputA.equals("3"));
-
+  */
     // 3. Menü wird angezeigt
     // inputB = eingabeConsole();
     // eingabeAuswahlRaum(inputB);
