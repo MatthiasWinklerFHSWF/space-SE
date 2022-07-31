@@ -121,7 +121,60 @@ public class Main {
     return input;
   }
 
+  public static void anzeigenAuswahlRaum(Raummanager rm){
+    String ausgabe = "";
+    ausgabe += "\nBitte geben Sie entsprechend ein \n" + "1. hinzufügen Raum \n" + "2. löschen Raum \n" + "3. anzeigen Raumüberischt \n";
+    System.out.println(ausgabe);
+  }
 
+  public static boolean eingabeAuswahlRaum(Raummanager rm){
+    String input = eingabeConsole();
+    boolean bool = false;
+
+    if(input.equals("1")) {
+      // 1. Auswahlmenü Raum hinzufügen
+      System.out.println("Auswahl << Raum hinzufügen >> wurde ausgewählt");
+      return true;
+    }
+
+    if(input.equals("2")){
+      // 2. Auswahlmenü Raum löschen
+      System.out.println("Auswahl << Raum löschen >> wurde ausgewählt");
+      do {
+        bool = eingabeAuswahladdRaum(rm);
+      } while(bool);
+
+      return true;
+    }
+
+    if(input.equals("3")){
+      // 3. Auswahlmenü Raumübersicht anzeigen
+      System.out.println("Auswahl << Raumübersicht anzeigen >> wurde ausgewählt");
+      return true;
+    }
+
+    return false;
+  }
+
+
+  public static boolean eingabeAuswahladdRaum(Raummanager rm){
+    System.out.println("Bitte geben Sie die Anzahl an Sitzplätzen an:");
+
+    // Sitzplätze als String erhalten und in int umwandeln
+    String inputSitz = eingabeConsole();
+    int inputSitzInt = Integer.parseInt(inputSitz);
+
+    // Raumnummer als String erhalten
+    System.out.println("Bitte geben Sie die Raumnummer an:");
+    String inputRaumnummer = eingabeConsole();
+
+
+    // Raum  erstellen und hinzufügen
+    // speichert in xml durch Benutzermanager
+    rm.addRaum(rm.createRaum(inputSitzInt, inputRaumnummer));
+
+    return true;
+  }
 
   public static void runRMBS() {
 
