@@ -68,6 +68,18 @@ public class Raummanager implements IRaummanager {
     return ausgabe;
   }
 
+  public Raum searchRaum(String nummer){
+    for (int i = 0; i < raum.length; i++){
+      if (raum[i] == null){
+        continue;
+      }
+      if (raum[i].getRaumnummer().equals(nummer)){
+        return raum[i];
+      }
+    }
+    return null;
+  }
+
   @Override
   //Einen Raum über die RaumID löschen
   public void removeRaum(String raumnummer) {

@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<java version="15.0.7" class="java.beans.XMLDecoder">
+<java version="15.0.1" class="java.beans.XMLDecoder">
  <object class="Domainmodell.Benutzer">
   <void property="name">
    <string>Test</string>
   </void>
   <void property="passwort">
    <string>1234</string>
+  </void>
+ </object>
+ <object class="Domainmodell.Benutzer">
+  <void property="name">
+   <string>Matthias</string>
+  </void>
+  <void property="passwort">
+   <string>1</string>
   </void>
  </object>
  <null/>
@@ -16,7 +24,6 @@
  <null/>
  <null/>
  <null/>
- <null/>4
  <null/>
  <null/>
  <null/>

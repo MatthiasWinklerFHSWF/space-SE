@@ -4,6 +4,8 @@ import Domainmodell.Benutzer;
 import Domainmodell.Buchung;
 import Domainmodell.Raum;
 
+import java.util.Date;
+
 public interface IRaumbuchungssystem {
 
   void addBuchung(Buchung buchung);
@@ -12,7 +14,7 @@ public interface IRaumbuchungssystem {
 
   Buchung[] getBuchung();
 
-  Buchung createBuchung(int buchungsID, Benutzer benutzer, Raum raum, int zeitraum);
+  Buchung createBuchung(Benutzer benutzer, Raum raum, int zeitraum, Date datum);
 
 
 }

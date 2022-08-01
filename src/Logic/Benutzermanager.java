@@ -15,6 +15,18 @@ public class Benutzermanager implements IBenutzermanager {
     return this.user;
   }
 
+  public Benutzer searchBenutzer(String name){
+    for (int i = 0; i < user.length; i++){
+      if (user[i] == null){
+        continue;
+      }
+      if (user[i].getName().equals(name)){
+        return user[i];
+      }
+    }
+    return null;
+  }
+
   // Methode um Benutzer hinzuzufügen
   @Override
   public void addBenutzer(Benutzer benutzer) {
