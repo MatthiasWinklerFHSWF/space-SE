@@ -209,12 +209,12 @@ public class Main {
   public static void eingabeAuswahlBuchung(Benutzermanager bm, Raummanager rm, Raumbuchungssystem rbs){
     String input = eingabeConsole();
 
-  if (input.equals("1")){
-    rbs.addBuchung(erstelleBuchung(bm, rm, rbs));
-    anzeigenAuswahlBuchung(bm, rm, rbs);
-  }
- if (input.equals("2")){
-   anzeigenAuswahlBuchung(bm, rm, rbs);
+    if (input.equals("1")){
+      rbs.addBuchung(erstelleBuchung(bm, rm, rbs));
+      anzeigenAuswahlBuchung(bm, rm, rbs);
+    }
+    if (input.equals("2")){
+      anzeigenAuswahlBuchung(bm, rm, rbs);
  }
  //TODO überarbeiten oder ergänzen um Methode Ausgabe nur eigene Buchungen
     if (input.equals("3")){
