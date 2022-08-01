@@ -53,6 +53,7 @@ public class Benutzermanager implements IBenutzermanager {
     // und setzt die Stelle im Array bei gleichem Namen auf null
     // ToDo Gefahr bei gleichem Namen das der falsche User gelöscht wird -> auf Benutzer ändern
     for (int i = 0; i < user.length; i++) {
+
       if (user[i] == null){
         continue;
       }

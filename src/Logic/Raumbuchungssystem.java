@@ -18,6 +18,11 @@ public class Raumbuchungssystem implements IRaumbuchungssystem {
   @Override
   public void removeBuchung(int buchungsID) {
     for (int i = 0; i < buchungen.length; i++) {
+
+      if (buchungen[i] == null){
+        continue;
+      }
+
       if (buchungen[i].getBuchungsID() == buchungsID) {
         buchungen[i] = null;
       }
