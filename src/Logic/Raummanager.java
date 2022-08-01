@@ -71,6 +71,7 @@ public class Raummanager implements IRaummanager {
   @Override
   //Einen Raum über die RaumID löschen
   public void removeRaum(String raumnummer) {
+    boolean bool = false;
     for (int i = 0; i < raum.length; i++) {
 
       if (raum[i] == null){
@@ -79,7 +80,15 @@ public class Raummanager implements IRaummanager {
 
       if (raum[i].getRaumnummer().equals(raumnummer)) {
         raum[i] = null;
+        bool = true;
       }
+    }
+
+    if (bool){
+      System.out.println("Raum mit der Nummer: " + raumnummer + " wurde erfolgreich gelöscht");
+    }
+    if (!bool){
+      System.out.println("Löschung fehlgeschlagen Raum unbekannt");
     }
    speicherRaum(raum);
   }

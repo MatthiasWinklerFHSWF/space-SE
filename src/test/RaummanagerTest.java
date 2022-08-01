@@ -18,7 +18,7 @@ public class RaummanagerTest {
     Raum raum2 = new Raum(25, "103");
     Raum raum3 = new Raum(25, "104");
 
-    // Testen ob beim hinzufügen nachher mehr Räume vorhanden sind
+    // Testen ob beim Hinzufügen nachher mehr Räume vorhanden sind
 
 
     @Test
