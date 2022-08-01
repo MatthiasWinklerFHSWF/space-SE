@@ -76,6 +76,7 @@ public class Main {
     if(input.equals("1")){
       // 1. Auswählmenü Buchungssystem
       System.out.println("Auswahl << Buchungsystem >> wurde ausgewählt");
+      anzeigenAuswahlBuchung(bm, rm, rbs);
       return true;
     }
 
