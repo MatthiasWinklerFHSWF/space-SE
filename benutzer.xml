@@ -16,7 +16,14 @@
    <string>1</string>
   </void>
  </object>
- <null/>
+ <object class="Domainmodell.Benutzer">
+  <void property="name">
+   <string>leonie</string>
+  </void>
+  <void property="passwort">
+   <string>12345</string>
+  </void>
+ </object>
  <null/>
  <null/>
  <null/>

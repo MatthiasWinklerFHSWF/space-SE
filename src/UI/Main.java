@@ -201,7 +201,7 @@ public class Main {
 
   public static void anzeigenAuswahlBuchung(Benutzermanager bm, Raummanager rm, Raumbuchungssystem rbs){
     String ausgabe = "";
-    ausgabe += "\n"+ "Bitte geben Sie entsprechend ein \n" + "1. Benutzer löschen \n" + "2. Zurück zur Auswahl";
+    ausgabe += "\n"+ "Bitte geben Sie entsprechend ein \n" + "1. Buchung erstellen \n" + "2. Buchung löschen \n" + "3. Buchungsübersicht anzeigen \n" + "4. Zurück zur Auswahl";
     System.out.println(ausgabe);
     eingabeAuswahlBuchung(bm, rm, rbs);
   }
@@ -247,7 +247,7 @@ public class Main {
     int jahr = Integer.parseInt(eingabeConsole());
     System.out.print("Monat: ");
     int monat = Integer.parseInt(eingabeConsole());
-    System.out.print("Tag ");
+    System.out.print("Tag: ");
     int tag = Integer.parseInt(eingabeConsole());
     Date datum = Buchung.createDate(jahr, monat, tag);
 
