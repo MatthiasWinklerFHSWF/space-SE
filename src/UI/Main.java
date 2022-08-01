@@ -142,6 +142,31 @@ public class Main {
     }
   }
 
+  public static boolean eingabeAuswahladdRaum(Benutzermanager bm, Raummanager rm, Raumbuchungssystem rbs){
+    System.out.println("Bitte geben Sie die Anzahl an Sitzplätzen an:");
+
+    // Sitzplätze als String erhalten und in int umwandeln
+    String inputSitz = eingabeConsole();
+    int inputSitzInt = Integer.parseInt(inputSitz);
+
+    // Raumnummer als String erhalten
+    System.out.println("Bitte geben Sie die Raumnummer an:");
+    String inputRaumnummer = eingabeConsole();
+
+
+    // Raum  erstellen und hinzufügen
+    // speichert in xml durch Benutzermanager
+    rm.addRaum(rm.createRaum(inputSitzInt, inputRaumnummer));
+
+    return true;
+  }
+
+  public static void eingabeAuswahlremoveRaum(Raummanager rm){
+    System.out.println("Bitte geben Sie die Raumnummer an:");
+    String input = eingabeConsole();
+    rm.removeRaum(input);
+  }
+
    public static void anzeigenAuswahlBenutzer(Benutzermanager bm, Raummanager rm, Raumbuchungssystem rbs){
     String ausgabe = "";
     ausgabe += "\n"+ "Bitte geben Sie entsprechend ein \n" + "1. Benutzer löschen \n" + "2. Zurück zur Auswahl";
@@ -183,30 +208,7 @@ public class Main {
 
   }
 
-  public static boolean eingabeAuswahladdRaum(Benutzermanager bm, Raummanager rm, Raumbuchungssystem rbs){
-    System.out.println("Bitte geben Sie die Anzahl an Sitzplätzen an:");
 
-    // Sitzplätze als String erhalten und in int umwandeln
-    String inputSitz = eingabeConsole();
-    int inputSitzInt = Integer.parseInt(inputSitz);
-
-    // Raumnummer als String erhalten
-    System.out.println("Bitte geben Sie die Raumnummer an:");
-    String inputRaumnummer = eingabeConsole();
-
-
-    // Raum  erstellen und hinzufügen
-    // speichert in xml durch Benutzermanager
-    rm.addRaum(rm.createRaum(inputSitzInt, inputRaumnummer));
-
-    return true;
-  }
-
-  public static void eingabeAuswahlremoveRaum(Raummanager rm){
-    System.out.println("Bitte geben Sie die Raumnummer an:");
-    String input = eingabeConsole();
-    rm.removeRaum(input);
-  }
 
   public static void runRMBS() {
 
@@ -230,7 +232,6 @@ public class Main {
     anzeigenAuswahlMenu(bm, rm, rbs);
 
   }
-
 
   public static String eingabeConsole() {
     Scanner sc = new Scanner(System.in);
