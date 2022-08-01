@@ -82,6 +82,7 @@ public class Main {
     if(input.equals("2")){
       // 2. Auswahlmenü Benutzerverwaltung
       System.out.println("Auswahl << Benutzerverwaltung >> wurde ausgewählt");
+      anzeigenAuswahlBenutzer(bm, rm, rbs);
       return true;
     }
 
@@ -96,7 +97,7 @@ public class Main {
 
   public static void anzeigenAuswahlRaum(Benutzermanager bm, Raummanager rm, Raumbuchungssystem rbs){
     String ausgabe = "";
-    ausgabe += "\nBitte geben Sie entsprechend ein \n" + "1. hinzufügen Raum \n" + "2. löschen Raum \n" + "3. anzeigen Raumüberischt \n";
+    ausgabe += "\n"+ "Bitte geben Sie entsprechend ein \n" + "1. hinzufügen Raum \n" + "2. löschen Raum \n" + "3. anzeigen Raumüberischt \n" + "4. Zurück zur Auswahl";
     System.out.println(ausgabe);
     eingabeAuswahlRaum(bm, rm, rbs);
   }
@@ -138,9 +139,48 @@ public class Main {
       System.out.println("Keine gültige Eingabe");
       anzeigenAuswahlRaum(bm, rm, rbs);
     }
-
   }
 
+   public static void anzeigenAuswahlBenutzer(Benutzermanager bm, Raummanager rm, Raumbuchungssystem rbs){
+    String ausgabe = "";
+    ausgabe += "\n"+ "Bitte geben Sie entsprechend ein \n" + "1. Benutzer löschen \n" + "2. Zurück zur Auswahl";
+    System.out.println(ausgabe);
+    eingabeAuswahlBenutzer(bm, rm, rbs);
+  }
+
+  public static void eingabeAuswahlBenutzer(Benutzermanager bm, Raummanager rm, Raumbuchungssystem rbs){
+    String input = eingabeConsole();
+
+    // ToDo nur Eingabe des eigenen Benutzers + Passwort
+    if (input.equals("1")){
+      System.out.println("Bitte geben Sie den Benutzernamen zum löschen ein:");
+      String benutzer = eingabeConsole();
+      bm.removeBenutzer(benutzer);
+      anzeigenWillkommen(bm, rm, rbs);
+    }
+
+    if (input.equals("2")){
+      // 4. zurück zum Auswahlmenü
+      anzeigenAuswahlMenu(bm, rm, rbs);
+    }
+
+    if (!input.equals("1") && !input.equals("2")){
+      System.out.println("Keine gültige Eingabe");
+      anzeigenAuswahlBenutzer(bm, rm, rbs);
+    }
+  }
+
+  public static void anzeigenAuswahlBuchung(Benutzermanager bm, Raummanager rm, Raumbuchungssystem rbs){
+    String ausgabe = "";
+    ausgabe += "\n"+ "Bitte geben Sie entsprechend ein \n" + "1. Benutzer löschen \n" + "2. Zurück zur Auswahl";
+    System.out.println(ausgabe);
+    eingabeAuswahlBuchung(bm, rm, rbs);
+  }
+
+  public static void eingabeAuswahlBuchung(Benutzermanager bm, Raummanager rm, Raumbuchungssystem rbs){
+    String input = eingabeConsole();
+
+  }
 
   public static boolean eingabeAuswahladdRaum(Benutzermanager bm, Raummanager rm, Raumbuchungssystem rbs){
     System.out.println("Bitte geben Sie die Anzahl an Sitzplätzen an:");
@@ -187,9 +227,6 @@ public class Main {
 
     // 1. Auswahlmenü anbieten
     anzeigenAuswahlMenu(bm, rm, rbs);
-
-
-
 
 
     // ToDo: Methode erstellen für Rückgabe bei falscher Eingabe
