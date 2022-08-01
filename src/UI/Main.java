@@ -1,8 +1,11 @@
 package UI;
 
 import Domainmodell.Benutzer;
+import Domainmodell.Buchung;
+import Domainmodell.Raum;
 import Logic.*;
 
+import java.util.Date;
 import java.util.Scanner;
 
 public class Main {
@@ -206,6 +209,55 @@ public class Main {
   public static void eingabeAuswahlBuchung(Benutzermanager bm, Raummanager rm, Raumbuchungssystem rbs){
     String input = eingabeConsole();
 
+  if (input.equals("1")){
+    rbs.addBuchung(erstelleBuchung(bm, rm, rbs));
+    anzeigenAuswahlBuchung(bm, rm, rbs);
+  }
+ if (input.equals("2")){
+   anzeigenAuswahlBuchung(bm, rm, rbs);
+ }
+ //TODO überarbeiten oder ergänzen um Methode Ausgabe nur eigene Buchungen
+    if (input.equals("3")){
+      System.out.println(rbs.ausgabeBuchungen());
+      anzeigenAuswahlBuchung(bm, rm, rbs);
+    }
+    if(!input.equals("1") && !input.equals("2") && !input.equals("3") && !input.equals("4")){
+      System.out.println("Keine gültige Eingabe");
+      anzeigenAuswahlBuchung(bm, rm, rbs);
+    }
+  }
+
+  public static Buchung erstelleBuchung(Benutzermanager bm, Raummanager rm,Raumbuchungssystem rbs){
+    Buchung newBuchung = null;
+    // Benutzer für Buchung erfassen
+    // TODO Benutzer über Benutzerlogin erfassen
+    System.out.println ("Bitte geben Sie ihren Benutzernamen ein:");
+    String name = eingabeConsole();
+    Benutzer benutzer = bm.searchBenutzer(name);
+    // Raum für Raumnummer erfassen
+    System.out.println("Bitte geben Sie den gewünschten Raum ein:");
+
+
+    String nummer = eingabeConsole();
+    Raum raum = rm.searchRaum(nummer);
+
+    // Eingabe Datum
+    System.out.println("Bitte geben Sie ein Datum ein: \n");
+    System.out.print("Jahr: ");
+    int jahr = Integer.parseInt(eingabeConsole());
+    System.out.print("Monat: ");
+    int monat = Integer.parseInt(eingabeConsole());
+    System.out.print("Tag ");
+    int tag = Integer.parseInt(eingabeConsole());
+    Date datum = Buchung.createDate(jahr, monat, tag);
+
+    // Zeitraum eingeben
+    System.out.println("Bitte geben Sie den gewünschten Zeitraum ein:");
+    System.out.println(rbs.ausgabeZeitraum());
+    int zeitraum = Integer.parseInt(eingabeConsole());
+    newBuchung = rbs.createBuchung(benutzer, raum, zeitraum, datum);
+
+    return newBuchung;
   }
 
 
